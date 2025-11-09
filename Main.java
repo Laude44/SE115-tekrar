@@ -47,8 +47,30 @@ public class Main {
 //        for(int i=0;i<randomArray.length;i++){          //This part prints the shifted form of the array.
 //            System.out.print(arrayShifter(randomArray)[i]);
 //        }
-
-
+        //Senario 3
+        //This part creates a statistic to use
+    String[] weatherStatistic = new String[100];
+    for(int i=0;i<100;i++){
+        if(i<40){weatherStatistic[i]="Sunny";}
+        else if(i<70){weatherStatistic[i]="Cloudy";}
+        else if (i<90){weatherStatistic[i]="Rainy";}
+        else{weatherStatistic[i]="Stormy";}
+    }
+        // This part simulates the 1 million day and count the number of days according to weather
+int[] counter = new int[4];
+    int days =1000000;
+    for(int i=0;i<days;i++){
+        String today = weatherStatistic[random.nextInt(100)];
+        if(today=="Sunny"){counter[0]++;}
+        if(today=="Cloudy"){counter[1]++;}
+        if(today=="Rainy"){counter[2]++;}
+        if(today=="Stormy"){counter[3]++;}
+    }
+        System.out.println("The number of the sunny days is: "+counter[0]);
+        System.out.println("The number of the cloudy days is: "+counter[1]);
+        System.out.println("The number of the rainy days is: "+counter[2]);
+        System.out.println("The number of the stormy days is: "+counter[3]);
+        System.out.printf("The percentage of the sunny days is : %d" ,counter[0]/days*100);
 
 
 
