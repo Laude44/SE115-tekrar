@@ -47,8 +47,9 @@ public class Main {
 //        for(int i=0;i<randomArray.length;i++){          //This part prints the shifted form of the array.
 //            System.out.print(arrayShifter(randomArray)[i]);
 //        }
+
         //Senario 3
-        //This part creates a statistic to use
+        //Thsi part creates a statistic to use
     String[] weatherStatistic = new String[100];
     for(int i=0;i<100;i++){
         if(i<40){weatherStatistic[i]="Sunny";}
@@ -56,8 +57,8 @@ public class Main {
         else if (i<90){weatherStatistic[i]="Rainy";}
         else{weatherStatistic[i]="Stormy";}
     }
-        // This part simulates the 1 million day and count the number of days according to weather
-    int[] counter = new int[4];
+        // This part simülates the 1 milloin day and count the number of days according to weather
+    double[] counter = new double[4];
     int days =1000000;
     for(int i=0;i<days;i++){
         String today = weatherStatistic[random.nextInt(100)];
@@ -66,15 +67,15 @@ public class Main {
         if(today.equals("Rainy")){counter[2]++;}
         if(today.equals("Stormy")){counter[3]++;}
     }
-        System.out.println("The number of the sunny days is: "+counter[0]);
-        System.out.println("The number of the cloudy days is: "+counter[1]);
-        System.out.println("The number of the rainy days is: "+counter[2]);
-        System.out.println("The number of the stormy days is: "+counter[3]);
+        System.out.printf("The number of the sunny days is: %.0f %n",counter[0]);
+        System.out.printf("The number of the cloudy days is: %.0f %n",counter[1]);
+        System.out.printf("The number of the rainy days is: %.0f %n",counter[2]);
+        System.out.printf("The number of the stormy days is: %.0f %n",counter[3]);
         System.out.println();
-        System.out.println("The percentage of the sunny days is : %"+100*counter[0]/days);
-        System.out.println("The percentage of the cloudy days is : %"+100*counter[1]/days);
-        System.out.println("The percentage of the rainy days is : %"+100*counter[2]/days);
-        System.out.println("The percentage of the stormy days is : %"+100*counter[3]/days);
+        System.out.printf("The percentage of the sunny days is : %.2f %% %n",100*counter[0]/days);
+        System.out.printf("The percentage of the cloudy days is : %.2f %% %n",100*counter[1]/days);
+        System.out.printf("The percentage of the rainy days is : %.2f %% %n",100*counter[2]/days);
+        System.out.printf("The percentage of the stormy days is : %.2f %% %n",100*counter[3]/days);
 
 
 
