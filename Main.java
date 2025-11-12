@@ -50,43 +50,65 @@ public class Main {
 
         //Senario 3
         //Thsi part creates a statistic to use
-    String[] weatherStatistic = new String[100];
-    for(int i=0;i<100;i++){
-        if(i<40){weatherStatistic[i]="Sunny";}
-        else if(i<70){weatherStatistic[i]="Cloudy";}
-        else if (i<90){weatherStatistic[i]="Rainy";}
-        else{weatherStatistic[i]="Stormy";}
+//    String[] weatherStatistic = new String[100];
+//    for(int i=0;i<100;i++){
+//        if(i<40){weatherStatistic[i]="Sunny";}
+//        else if(i<70){weatherStatistic[i]="Cloudy";}
+//        else if (i<90){weatherStatistic[i]="Rainy";}
+//        else{weatherStatistic[i]="Stormy";}
+//    }
+//        // This part simülates the 1 milloin day and count the number of days according to weather
+//    double[] counter = new double[4];
+//    int days =1000000;
+//    for(int i=0;i<days;i++){
+//        String today = weatherStatistic[random.nextInt(100)];
+//        if(today.equals("Sunny")){counter[0]++;}
+//        if(today.equals("Cloudy")){counter[1]++;}
+//        if(today.equals("Rainy")){counter[2]++;}
+//        if(today.equals("Stormy")){counter[3]++;}
+//    }
+//        System.out.printf("The number of the sunny days is: %.0f %n",counter[0]);
+//        System.out.printf("The number of the cloudy days is: %.0f %n",counter[1]);
+//        System.out.printf("The number of the rainy days is: %.0f %n",counter[2]);
+//        System.out.printf("The number of the stormy days is: %.0f %n",counter[3]);
+//        System.out.println();
+//        System.out.printf("The percentage of the sunny days is : %.2f %% %n",100*counter[0]/days);
+//        System.out.printf("The percentage of the cloudy days is : %.2f %% %n",100*counter[1]/days);
+//        System.out.printf("The percentage of the rainy days is : %.2f %% %n",100*counter[2]/days);
+//        System.out.printf("The percentage of the stormy days is : %.2f %% %n",100*counter[3]/days);
+
+        //Senario 4
+//int[] integerArray = new int[30];
+//for(int i=0;i<integerArray.length;i++){
+//    integerArray[i] =random.nextInt(1,101);
+//}
+//int peakCounter=0;
+//int gratestPeakValue=0;
+//for(int i=1;i<integerArray.length-1;i++){
+//    if(integerArray[i]>integerArray[i-1]&&integerArray[i]>integerArray[i+1]){
+//        System.out.println("integerArray["+i+"] is a peak and its value is: "+integerArray[i]);
+//        peakCounter++;}
+//    if(gratestPeakValue<integerArray[i])
+//    {gratestPeakValue=integerArray[i];}
+//}
+//        System.out.println("The number of the peaks are: "+peakCounter);
+//        System.out.println("The gratest peak is : "+gratestPeakValue);
+
+        //System.out.println(arrayExpander(studentID,42).length); //Prints the new length of the array
+
+        //Bonus problem
+    int[][] scores = new int[5][4]; // 5 students and 4 quizes
+        for(int i=0;i<scores.length;i++){
+            System.out.println(); // Seperating the students grades
+            System.out.println("Quizes of the student number "+i);
+            for(int j=0;j<scores[i].length;j++){
+                scores[i][j]= random.nextInt(100);
+                System.out.println("Quiz number "+j+" is : "+scores[i][j]);
+            }
+        }
+
+
     }
-        // This part simülates the 1 milloin day and count the number of days according to weather
-    double[] counter = new double[4];
-    int days =1000000;
-    for(int i=0;i<days;i++){
-        String today = weatherStatistic[random.nextInt(100)];
-        if(today.equals("Sunny")){counter[0]++;}
-        if(today.equals("Cloudy")){counter[1]++;}
-        if(today.equals("Rainy")){counter[2]++;}
-        if(today.equals("Stormy")){counter[3]++;}
-    }
-        System.out.printf("The number of the sunny days is: %.0f %n",counter[0]);
-        System.out.printf("The number of the cloudy days is: %.0f %n",counter[1]);
-        System.out.printf("The number of the rainy days is: %.0f %n",counter[2]);
-        System.out.printf("The number of the stormy days is: %.0f %n",counter[3]);
-        System.out.println();
-        System.out.printf("The percentage of the sunny days is : %.2f %% %n",100*counter[0]/days);
-        System.out.printf("The percentage of the cloudy days is : %.2f %% %n",100*counter[1]/days);
-        System.out.printf("The percentage of the rainy days is : %.2f %% %n",100*counter[2]/days);
-        System.out.printf("The percentage of the stormy days is : %.2f %% %n",100*counter[3]/days);
-
-
-
-
-    }   
-
-//        System.out.println(arrayExpander(studentID,42).length); //Prints the new length of the array
-
-
-
-
 //    }
 
         // Senario 1
