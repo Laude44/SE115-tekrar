@@ -57,20 +57,25 @@ public class Main {
         else{weatherStatistic[i]="Stormy";}
     }
         // This part simulates the 1 million day and count the number of days according to weather
-int[] counter = new int[4];
+    int[] counter = new int[4];
     int days =1000000;
     for(int i=0;i<days;i++){
         String today = weatherStatistic[random.nextInt(100)];
-        if(today=="Sunny"){counter[0]++;}
-        if(today=="Cloudy"){counter[1]++;}
-        if(today=="Rainy"){counter[2]++;}
-        if(today=="Stormy"){counter[3]++;}
+        if(today.equals("Sunny")){counter[0]++;}
+        if(today.equals("Cloudy")){counter[1]++;}
+        if(today.equals("Rainy")){counter[2]++;}
+        if(today.equals("Stormy")){counter[3]++;}
     }
         System.out.println("The number of the sunny days is: "+counter[0]);
         System.out.println("The number of the cloudy days is: "+counter[1]);
         System.out.println("The number of the rainy days is: "+counter[2]);
         System.out.println("The number of the stormy days is: "+counter[3]);
-        System.out.printf("The percentage of the sunny days is : %d" ,counter[0]/days*100);
+        System.out.println();
+        System.out.println("The percentage of the sunny days is : %"+100*counter[0]/days);
+        System.out.println("The percentage of the cloudy days is : %"+100*counter[1]/days);
+        System.out.println("The percentage of the rainy days is : %"+100*counter[2]/days);
+        System.out.println("The percentage of the stormy days is : %"+100*counter[3]/days);
+
 
 
 
