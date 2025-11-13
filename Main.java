@@ -97,16 +97,19 @@ public class Main {
         //System.out.println(arrayExpander(studentID,42).length); //Prints the new length of the array
 
         //Bonus problem
-    int[][] scores = new int[5][4]; // 5 students and 4 quizes
+    int[][] scores = new int[5][5]; // 5 student and 4 quizes but 5 rows. İn order to show students.
 
         for(int i=0;i<scores.length+0;i++){
             scores[i][0]=i+1;
-            System.out.print(scores[i][0]+"   ");
+            System.out.printf("%01d    ",scores[i][0]);
         }
-        for(int i=0;i<scores.length;i++){
-            for(int j=1;j<scores[i].length+1;j++){
+        System.out.println();
+        for(int i=1;i<scores.length;i++){
+            System.out.println();
+            for(int j=0;j<scores[i].length;j++){
                 scores[i][j]=random.nextInt(101);
-                System.out.println(scores[i][j]);
+                System.out.printf("%02d   ",scores[i][j]);
+
             }
         }
 
