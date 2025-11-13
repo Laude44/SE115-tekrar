@@ -98,14 +98,19 @@ public class Main {
 
         //Bonus problem
     int[][] scores = new int[5][4]; // 5 students and 4 quizes
+
+        for(int i=0;i<scores.length+0;i++){
+            scores[i][0]=i+1;
+            System.out.print(scores[i][0]+"   ");
+        }
         for(int i=0;i<scores.length;i++){
-            System.out.println(); // Seperating the students grades
-            System.out.println("Quizes of the student number "+i);
-            for(int j=0;j<scores[i].length;j++){
-                scores[i][j]= random.nextInt(100);
-                System.out.println("Quiz number "+j+" is : "+scores[i][j]);
+            for(int j=1;j<scores[i].length+1;j++){
+                scores[i][j]=random.nextInt(101);
+                System.out.println(scores[i][j]);
             }
         }
+
+
 
 
     }
